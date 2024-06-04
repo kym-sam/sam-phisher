@@ -279,6 +279,19 @@ EOF
 terminal
 }
 
+help_banner(){
+cat << EOF
+${WHITE}
+FONTS :${GREEN}
+console, block, simpleBlock, simple, 3d, simple3d 
+chrome, huge, shade, slick, grid, pallet, tiny
+${WHITE}
+EOF
+  read -p "${WHITE}[-] Digite seu nome : " name
+  read -p "${WHITE}[-] Selecione a fonte   : " font
+  clear
+  cfonts "$name" -f "$font" -a center -c white,green
+}
 ip() {
 	IP=$(grep -a 'IP:' .server/www/ip.txt | cut -d " " -f2 | tr -d '\r')
     IFS=$'\n'
