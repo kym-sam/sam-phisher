@@ -130,7 +130,7 @@ ${ORANGEBG}${BLACK} SAMPHISER ABOUT! ${RESETBG}
 
 Version :   0.0.1
 Author  :   sasame
-Creator :   kym-sam (mileque)
+Creator :   kym-sam
 
 ${WHITEBG}${BLACK} GITHUB ! ${RESETBG}
 
