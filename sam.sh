@@ -288,8 +288,8 @@ console, block, simpleBlock, simple, 3d, simple3d
 chrome, huge, shade, slick, grid, pallet, tiny
 ${WHITE}
 EOF
-  read -p "${WHITE}[-] Digite seu nome : " name
-  read -p "${WHITE}[-] Selecione a fonte   : " font
+  read -p "${WHITE}[-] Type your name : " name
+  read -p "${WHITE}[-] Select the source   : " font
   clear
   cfonts "$name" -f "$font" -a center -c white,green
 }
