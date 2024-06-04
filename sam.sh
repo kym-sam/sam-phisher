@@ -311,8 +311,8 @@ location() {
 	LOC=$(grep -a 'Latitude:' .server/www/location.txt | cut -d " " -f2 | tr -d '\r')
     LOC2=$(grep -a 'Longitude:' .server/www/location.txt | cut -d " " -f2 | tr -d '\r')
     IFS=$'\n'
-		echo -e "\n${WHITE}Latitude   :  ${BLUE}$LOC"
-    echo -e "\n${WHITE}Longitude      :  ${BLUE}$LOC2"
+		echo -e "\n${WHITE}Latitude  : ${BLUE}$LOC"
+    echo -e "\n${WHITE}Longitude  : ${BLUE}$LOC2"
     cat .server/www/location.txt >> auth/location.dat
 }
 
