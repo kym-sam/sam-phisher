@@ -257,7 +257,7 @@ printf "\n"
 sleep 7
 send_url=$(grep -o "https://[0-9a-z]*\.serveo.net" .server/www/linksender)
 printf "\n"
-echo -e "${WHITE}[-] URL: ${GREEN} $send_url/index.php"
+echo -e "${WHITE}[-] URL: ${GREEN} $send_url"
 printf "\n"
 capture_data
 }
