@@ -4,12 +4,17 @@
  # 
  # Copyright (c) 2024 sasame - samphisher
 
- #                               _     _       _
- #                          ___ | |   (_)     | |
- #  ____  ___ _ _ __  ___  |  _ \ |__  _  ____| |__   ___ _ __
- # /  __|/ _ ' | '_ ''_  \ | |_) | _  \ |/  __|  _  \/ _ \ '__|
- # \__  \ (_|  | | |_| | | |  __/ | | | |\__  \ | | |  __/ |
- # |____/\___._|_|     |_| |_|  |_| |_|_||____/_| |_|\___|_|
+ #  ___  __ _  ___  __ _ _ __  __   ___
+ # / __|/ _' |/ __|/ _' | '_ ''_  \/ _ \ 
+ # \_  \ (_| |\_  \ (_| | | | | | |  __/
+ # |___/\__._||___/\__._|_| |_| |_|\___|
+ #        | |   (_)    | |
+ #   ___  | |__  _  ___| |__   ___ _ __
+ #  |  _ \| '_  \ |/ __| '_  \/ _ \ '__|
+ #  | |_) | | | | |\_  \ | | |  __/ |
+ #  | .__/|_| |_|_||___/_| |_|\___|_|
+ #  | |
+ #  |_|
 
  # Github sasame    :   https://github.com/kym-sam/sam-phisher
  # Github kym-sam   :   https://github.com/kym-sam/
@@ -85,18 +90,18 @@ fi
 PLAY2="${WHITE}┌──(${MAGENTA}$USER${WHITE})‒[${WHITE} ${ORANGE}bunny girl senpai${WHITE} ] ...
 └─${MAGENTA}>: ${WHITE}"
 
+__VERSION__="0.0.1"
+
 banner(){
     clear
 
 cat << EOF
 ${WHITE}
-─╔═══╗╔═══╗─╔═══╗╔═══╗─╔═╗╔═╗─╔═══╗
-─║╔═╗║║╔═╗║─║╔═╗║║╔═╗║─║║╚╝║║─║╔══╝
-─║╚══╗║║─║║─║╚══╗║║─║║─║╔╗╔╗║─║╚══╗
-─╚══╗║║╚═╝║─╚══╗║║╚═╝║─║║║║║║─║╔══╝
-─║╚═╝║║╔═╗║─║╚═╝║║╔═╗║─║║║║║║─║╚══╗
-─╚═══╝╚╝─╚╝─╚═══╝╚╝─╚╝─╚╝╚╝╚╝─╚═══╝                  
-             ----- Version 0.0.1 --
+${WHITE} ___  __ _  ___  __ _ _ __  __   ___
+${WHITE}/ __|/ _' |/ __|/ _' | '_ ''_  \/ _ \ 
+${WHITE}\_  \ (_| |\_  \ (_| | | | | | |  __/
+${WHITE}|___/\__._||___/\__._|_| |_| |_|\___|
+                       ${WHITE}Version: $__VERSION__   
 EOF
     echo -e "\n${WHITE}-- =[ Program Created by ~> sasame"
 
@@ -118,14 +123,12 @@ about(){
     clear;    
 
 cat << EOF
-${WHITE}      
-─╔═══╗╔═══╗─╔═══╗╔═══╗─╔═╗╔═╗─╔═══╗
-─║╔═╗║║╔═╗║─║╔═╗║║╔═╗║─║║╚╝║║─║╔══╝
-─║╚══╗║║─║║─║╚══╗║║─║║─║╔╗╔╗║─║╚══╗
-─╚══╗║║╚═╝║─╚══╗║║╚═╝║─║║║║║║─║╔══╝
-─║╚═╝║║╔═╗║─║╚═╝║║╔═╗║─║║║║║║─║╚══╗
-─╚═══╝╚╝─╚╝─╚═══╝╚╝─╚╝─╚╝╚╝╚╝─╚═══╝         
-              ---- Version 0.0.1 --
+${WHITE}
+${WHITE} ___  __ _  ___  __ _ _ __  __   ___
+${WHITE}/ __|/ _' |/ __|/ _' | '_ ''_  \/ _ \ 
+${WHITE}\_  \ (_| |\_  \ (_| | | | | | |  __/
+${WHITE}|___/\__._||___/\__._|_| |_| |_|\___|
+                       ${WHITE}Version: $__VERSION__
 ${ORANGEBG}${BLACK} SAMPHISER ABOUT! ${RESETBG}
 
 Version :   0.0.1
@@ -134,8 +137,8 @@ Creator :   kym-sam
 
 ${WHITEBG}${BLACK} GITHUB ! ${RESETBG}
 
-${BLUE}Github - kym-sam  :  ${GREEN}https://github.com/kym-sam
-${BLUE}Github - program  :  ${GREEN}https://github.com/kym-sam/sam-phisher
+${WHITE}Github - kym-sam  :  ${BLUE}https://github.com/kym-sam
+${WHITE}Github - program  :  ${BLUE}https://github.com/kym-sam/sam-phisher
 EOF
 printf "\e[1;92m"
 terminal
@@ -267,8 +270,8 @@ help(){
 cat << EOF
 ${WHITE}
 WELCOME!
-Bash ${GREEN}sam.sh${WHITE} Version: 0.0.1 - 2024
-Github : ${GREEN}https://github.com/kym-sam${WHITE}
+Bash sam.sh${WHITE} Version: 0.0.1 - 2024
+Github : ${BLUE}https://github.com/kym-sam${WHITE}
 
 COMMANDS:
 
