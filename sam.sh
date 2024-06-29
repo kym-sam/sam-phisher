@@ -276,7 +276,7 @@ start_ngrok() {
         rm -rf .server/www/linksender
     fi
 
-    ./ngrok http $PORT > /dev/null 2>&1 &
+    ./ngrok http http:\\$HOST:$PORT > /dev/null 2>&1 &
     sleep 7
 
     # Obtém a URL do ngrok

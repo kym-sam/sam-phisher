@@ -3,7 +3,6 @@
 # Hello 👋
 
 pkg update && pkg upgrade
-pkg install openssh
 pkg install which
 pkg install php
 pkg install nodejs -y
